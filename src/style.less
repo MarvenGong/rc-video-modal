@@ -1,0 +1,79 @@
+.rc-vmodal__mask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s;
+  &.visible{
+    opacity: 1;
+  }
+}
+.rc-vmodal__dialog{
+  position: fixed;
+  width: 800px;
+  height: auto;
+  z-index: 10000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%);
+  opacity: 0;
+  transition: all 0.3s;
+  &.visible{
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  & * {
+    box-sizing: border-box;
+  }
+  h3{
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    height: 22px;
+    line-height: 22px;
+    .close {
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      right: 0;
+      height: 22px;
+      width: 22px;
+      top: 0;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:before, &:after {
+        content: " ";
+        display: inline-block;
+        width: 16px;
+        height: 1px;
+        background-color: #fff;
+        transform-origin: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+      }
+      &:before{
+        transform: rotate(-45deg);
+      }
+      &:after{
+        transform: rotate(45deg);
+      }
+      &:hover{
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .video-area{
+    // background-color: #000;
+    video{
+      width: 100%;
+    }
+  }
+  
+}
