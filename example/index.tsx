@@ -7,12 +7,12 @@ const App = () => {
   return (
     <div>
       <VideoModal
-        autoPlay
+        autoPlay={false}
         controls
         loop={false}
         muted
         width={'50%'}
-        src="https://ecs-dev-public-1258344699.cos.ap-nanjing.myqcloud.com/static/video/ecs-home-banner-video-1.mp4">
+        src="https://fastmock.cn-bj.ufileos.com/video/video_fastmock-1.mp4">
         <button style={{
           background: 'blue',
           color: '#fff',

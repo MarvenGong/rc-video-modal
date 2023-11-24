@@ -33912,12 +33912,12 @@ var ReactDOM = __importStar(require("react-dom"));
 var _1 = __importDefault(require("../."));
 var App = function App() {
   return React.createElement("div", null, React.createElement(_1.default, {
-    autoPlay: true,
+    autoPlay: false,
     controls: true,
     loop: false,
     muted: true,
     width: '50%',
-    src: "https://ecs-dev-public-1258344699.cos.ap-nanjing.myqcloud.com/static/video/ecs-home-banner-video-1.mp4"
+    src: "https://fastmock.cn-bj.ufileos.com/video/video_fastmock-1.mp4"
   }, React.createElement("button", {
     style: {
       background: 'blue',
