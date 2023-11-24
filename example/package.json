@@ -1,27 +1,37 @@
 {
-  "name": "example",
+  "name": "rc-video-modal-demo",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "rm -rf .parcel-cache && parcel",
+    "build": "rm -rf .parcel-cache && parcel build"
   },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
-    "react-app-polyfill": "^1.0.0"
+    "react": "^18.2.0",
+    "react-app-polyfill": "^1.0.0",
+    "react-dom": "^18.2.0"
   },
   "alias": {
     "react": "../node_modules/react",
-    "react-dom": "../node_modules/react-dom/profiling",
+    "react-dom": "../node_modules/react-dom",
     "scheduler/tracing": "../node_modules/scheduler/tracing-profiling"
   },
   "devDependencies": {
-    "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.8.4",
-    "parcel": "^1.12.3",
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.17",
+    "parcel": "^2.10.3",
+    "process": "^0.11.10",
     "typescript": "^3.4.5"
   },
   "resolutions": {
     "@babel/preset-env": "7.13.8"
+  },
+  "source": "./index.html",
+  "targets": {
+    "default": {
+      "distDir": "./dist",
+      "publicUrl": "./"
+    }
   }
 }

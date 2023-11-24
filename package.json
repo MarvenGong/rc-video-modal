@@ -51,6 +51,10 @@
       "limit": "10 KB"
     }
   ],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.0.0",
     "@types/react": "^18.2.38",
