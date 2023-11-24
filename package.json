@@ -38,16 +38,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "tsdx-demo01",
+  "name": "rc-video-modal",
   "author": "marvengong",
-  "module": "dist/tsdx-demo01.esm.js",
+  "module": "dist/rc-video-modal.esm.js",
   "size-limit": [
     {
-      "path": "dist/tsdx-demo01.cjs.production.min.js",
+      "path": "dist/rc-video-modal.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/tsdx-demo01.esm.js",
+      "path": "dist/rc-video-modal.esm.js",
       "limit": "10 KB"
     }
   ],

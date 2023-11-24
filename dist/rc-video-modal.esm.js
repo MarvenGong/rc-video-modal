@@ -103,4 +103,4 @@ var VideoModal = function VideoModal(props) {
 };
 
 export default VideoModal;
-//# sourceMappingURL=tsdx-demo01.esm.js.map
+//# sourceMappingURL=rc-video-modal.esm.js.map

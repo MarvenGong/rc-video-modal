@@ -79,4 +79,4 @@ var VideoModal = function VideoModal(props) {
 };
 
 exports.default = VideoModal;
-//# sourceMappingURL=tsdx-demo01.cjs.development.js.map
+//# sourceMappingURL=rc-video-modal.cjs.development.js.map
