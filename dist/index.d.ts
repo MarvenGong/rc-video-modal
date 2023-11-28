@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './style.less';
-export interface IRcVideoModal {
+export interface IRcVideoModal extends React.VideoHTMLAttributes<HTMLVideoElement> {
     title?: string;
     width?: number | string;
     onClose?: () => void;

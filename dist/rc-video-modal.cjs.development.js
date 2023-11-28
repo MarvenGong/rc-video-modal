@@ -7,6 +7,20 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var React = require('react');
 var ReactDOM = _interopDefault(require('react-dom'));
 
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
+}
+
+var _excluded = ["title", "width", "src", "autoPlay", "controls", "loop", "muted", "closeOnClickMask", "showClose", "onClose"];
 var VideoModal = function VideoModal(props) {
   var _props$title = props.title,
     title = _props$title === void 0 ? '视频' : _props$title,
@@ -25,7 +39,8 @@ var VideoModal = function VideoModal(props) {
     closeOnClickMask = _props$closeOnClickMa === void 0 ? true : _props$closeOnClickMa,
     _props$showClose = props.showClose,
     showClose = _props$showClose === void 0 ? true : _props$showClose,
-    onClose = props.onClose;
+    onClose = props.onClose,
+    otherProps = _objectWithoutPropertiesLoose(props, _excluded);
   var videoRef = React.useRef(null);
   var _useState = React.useState(false),
     visible = _useState[0],
@@ -58,15 +73,16 @@ var VideoModal = function VideoModal(props) {
       className: 'close'
     })), React.createElement("div", {
       className: 'video-area'
-    }, React.createElement("video", {
-      ref: videoRef,
+    }, React.createElement("video", Object.assign({
+      ref: videoRef
+    }, otherProps, {
       autoPlay: autoPlay,
       loop: loop,
       controls: controls,
       muted: muted,
       preload: "metadata",
       src: src
-    })))));
+    }))))));
   };
   return React.createElement(React.Fragment, null, ReactDOM.createPortal(renderModal(), document.body), React.cloneElement(props.children, {
     onClick: function onClick() {
