@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import './style.less';
 import ReactDOM from 'react-dom';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 export interface IRcVideoModal extends React.VideoHTMLAttributes<HTMLVideoElement> {
   title?: string;
   width?: number | string;
@@ -31,7 +31,6 @@ const VideoModal = (props: IRcVideoModal) => {
     onClose,
     ...otherProps
   } = props;
-  const videoRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const [show, setShow] = useState(false);
   const handleClose = () => {
@@ -56,7 +55,6 @@ const VideoModal = (props: IRcVideoModal) => {
           </h3>
           <div className='video-area'>
             <video
-              ref={videoRef}
               {...otherProps}
               autoPlay={autoPlay}
               loop={loop}

@@ -1,5 +1,5 @@
 {
-  "version": "0.2.2",
+  "version": "0.2.5",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -51,10 +51,7 @@
       "limit": "10 KB"
     }
   ],
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.0.0",
     "@types/react": "^18.2.38",

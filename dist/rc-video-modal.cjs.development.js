@@ -41,7 +41,6 @@ var VideoModal = function VideoModal(props) {
     showClose = _props$showClose === void 0 ? true : _props$showClose,
     onClose = props.onClose,
     otherProps = _objectWithoutPropertiesLoose(props, _excluded);
-  var videoRef = React.useRef(null);
   var _useState = React.useState(false),
     visible = _useState[0],
     setVisible = _useState[1];
@@ -73,9 +72,7 @@ var VideoModal = function VideoModal(props) {
       className: 'close'
     })), React.createElement("div", {
       className: 'video-area'
-    }, React.createElement("video", Object.assign({
-      ref: videoRef
-    }, otherProps, {
+    }, React.createElement("video", Object.assign({}, otherProps, {
       autoPlay: autoPlay,
       loop: loop,
       controls: controls,

@@ -1,4 +1,4 @@
-import { useRef, useState, createElement, Fragment, cloneElement } from 'react';
+import { useState, createElement, Fragment, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -65,7 +65,6 @@ var VideoModal = function VideoModal(props) {
     showClose = _props$showClose === void 0 ? true : _props$showClose,
     onClose = props.onClose,
     otherProps = _objectWithoutPropertiesLoose(props, _excluded);
-  var videoRef = useRef(null);
   var _useState = useState(false),
     visible = _useState[0],
     setVisible = _useState[1];
@@ -97,9 +96,7 @@ var VideoModal = function VideoModal(props) {
       className: 'close'
     })), createElement("div", {
       className: 'video-area'
-    }, createElement("video", Object.assign({
-      ref: videoRef
-    }, otherProps, {
+    }, createElement("video", Object.assign({}, otherProps, {
       autoPlay: autoPlay,
       loop: loop,
       controls: controls,
